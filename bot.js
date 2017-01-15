@@ -22,19 +22,14 @@ var HTTPS = require('https');
 	                "MIA","BUF","SF","WAS","NYJ","TB"]
 	  if(request.text && botRegex.test(request.text)) {
 	    this.res.writeHead(200);
-	    postMessage("http://daddyleagues.com/GIML/schedules");
+	    postMessage("http://daddyleagues.com/MBCFL/schedules");
 	    this.res.end();
 	  }
 	  else if(request.text && botRegexSlut.test(request.text)) {
 	    this.res.writeHead(200);
-	    postMessage("'Command' -- 'Function' \n/rules -- GIML rules  \n/sch 'team initials' -- Team Schedule  \n/ply 'Player Name' -- Player Info  \n/ros 'team initials' -- Team Roster  \n/week -- Weekly Schedule  \n/forum -- DL Forum  \n/standings -- Division Standings  \n/fb -- Facebook Group");
+	    postMessage("'Command' -- 'Function' \n/rules -- MBCFL rules  \n/sch 'team initials' -- Team Schedule  \n/ply 'Player Name' -- Player Info  \n/ros 'team initials' -- Team Roster  \n/week -- Weekly Schedule  \n/DL -- DL Page  \n/standings -- Division Standings");
 	    this.res.end();
-	  } 
-	  else if(request.text && botRegexStop.test(request.text)) {
-	    this.res.writeHead(200);
-	    postMessage("Don't forget to join the FB group if you haven't already!  \nhttps://www.facebook.com/groups/145354099283900/");
-	    this.res.end();
-	  } 
+	  }
 	  else if(request.text && botRegexProp.test(request.text)) {
 	    this.res.writeHead(200);
 	    postMessage("https://i.groupme.com/409x327.jpeg.08b5d95c51bb4897835cfe6b514f2f52.large");
@@ -78,7 +73,7 @@ var HTTPS = require('https');
 	  else if(request.text && botRegexDL.test(request.text)) {
 	    this.res.writeHead(200);
 	    //postMessage("http://www.daddyleagues.com/maddenrating?name=&position=all&team="+request.text.substring(5,8));
-	    postMessage("http://daddyleagues.com/GIML/team/"+request.text.substring(5,8)+"/depthchart");
+	    postMessage("http://daddyleagues.com/MBCFL/team/"+request.text.substring(5,8)+"/depthchart");
 	    this.res.end();
 	  } 
 	  
@@ -99,25 +94,25 @@ var HTTPS = require('https');
 	  }
 	  else if(request.text && botRegexRules.test(request.text)) {
 	    this.res.writeHead(200);
-	    postMessage("https://docs.google.com/document/d/1ShmkjSr2qZbNpnD0pRyVjgu9LsG0DDG8BQi3CJQVcx4/edit?usp=sharing");
+	    postMessage("https://daddyleagues.com/MBCFL/rules");
 	    this.res.end();
 	  } 
 	  else if(request.text && botRegexGTA.test(request.text)) {
 	    this.res.writeHead(200);
-	    postMessage("http://daddyleagues.com/giml/forum/home");
+	    postMessage("http://daddyleagues.com/MBCFL");
 	    this.res.end();
 	  } 
 	  else if(request.text && botRegexSC.test(request.text)) {
 	    this.res.writeHead(200);
 	    
-	    postMessage("http://daddyleagues.com/GIML/team/"+request.text.substring(5,8)+"/schedule");
+	    postMessage("http://daddyleagues.com/MBCFL/team/"+request.text.substring(5,8)+"/schedule");
 	    this.res.end();
 	  }
 	  else if(request.text && botRegexP.test(request.text)) {
 	    this.res.writeHead(200);
 	    var req = request.text.substring(5,request.text.length);
 	    var rep = req.replace(/ /,"+");
-	    postMessage("http://daddyleagues.com/GIML/players?name="+rep+"&position=all&team=all");
+	    postMessage("http://daddyleagues.com/MBCFL/players?name="+rep+"&position=all&team=all");
 	    
 	    this.res.end();
 	  }  
