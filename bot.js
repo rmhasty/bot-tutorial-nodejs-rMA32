@@ -57,7 +57,7 @@ var HTTPS = require('https');
 	  } 
 	  else if(request.text && botRegexNice.test(request.text)) {
 	    this.res.writeHead(200);
-	    postMessage("http://giphy.com/gifs/south-park-R8oQcpddGK92g");
+	    postMessage("https://media.giphy.com/media/R8oQcpddGK92g/giphy.gif");
 	    this.res.end();
 	  } 
 	  else if(request.text && botRegexWelcome.test(request.text)) {
