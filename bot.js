@@ -89,7 +89,7 @@ var HTTPS = require('https');
 	  } 
 	  else if(request.text && botRegexAd.test(request.text)) {
 	    this.res.writeHead(200);
-	    postMessage("http://daddyleagues.com/GIML/standings");
+	    postMessage("http://daddyleagues.com/MBCFL/standings");
 	    this.res.end();
 	  }
 	  else if(request.text && botRegexRules.test(request.text)) {
