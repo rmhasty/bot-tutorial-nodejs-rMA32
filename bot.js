@@ -8,7 +8,7 @@ var HTTPS = require('https');
 	function respond() {
 	  var request = JSON.parse(this.req.chunks[0]),
 	      botRegex = /^\/week/;  botRegexDL = /^\/ros/i;botRegexSalt = /^\/salt/;botRegexRules = /^\/rules/
-	      botRegexAd=/^\/standings/;botRegexGTA = /^\/forum/; botRegexSC = /^\/sch/i; botODB = /(.*\s+)(.*odb)(\s+.*)/i; botDuck = /^\/duck/;
+	      botRegexAd=/^\/standings/;botRegexGTA = /^\/DL/; botRegexSC = /^\/sch/i; botODB = /(.*\s+)(.*odb)(\s+.*)/i; botDuck = /^\/duck/;
 	      botRegexP = /^\/ply/i;  botRegexTw = /^\/twitch/i; botRegexSb = /^\/sub/; botRegexSh = /^\/shrug/; botRegexWk = /^\/users/; botRegexCC = /^\/cc/;
 	      botRegexSiege = /^\/siege/; botRegexOW = /^\/ratings/; 
 	      botRegexSlut = /^\/help/; botRegexStop = /^\/fb/;
