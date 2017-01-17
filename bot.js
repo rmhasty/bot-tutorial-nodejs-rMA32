@@ -181,7 +181,14 @@ var HTTPS = require('https');
 	    this.res.end();
 	  }
 	}
-	
+	function send8Ball() {
+	global $xml;
+	$count = count($xml->magic8ball->reply);
+	$index = rand(0, $count);
+	$msg = "Magic 8-Ball: " . $xml->magic8ball->reply[$index];
+	sendMsg($msg);
+	}
+
 
 	function postMessage(response) {
 	  var botResponse,options, body, botReq;
