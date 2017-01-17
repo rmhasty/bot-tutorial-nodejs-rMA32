@@ -13,7 +13,7 @@ var HTTPS = require('https');
 	      botRegexSiege = /^\/siege/; botRegexOW = /^\/ratings/; 
 	      botRegexSlut = /^\/help/; botRegexStop = /^\/fb/;
 	      botRegexProp = /^\/prop/;botRegexKys = /^\/kys/; botRegexTakinL = /^\/heretakethis/; botRegexBrye = /^\/brye/;
-	      botRegexNice = /^\/nice/; botRegexWelcome = /^\/welcome/; botRegexShaki = /^\/shaki/;
+	      botRegexNice = /^\/nice/; botRegexWelcome = /^\/welcome/; botRegex8ball = /^\/8ball/;
 	      botRegexDaf = /^\/dafuq/; botRegexAyy = /^\/ayy/; botRegexSchedule = /^\/schedule/;
 	      siege1 = 'https://i.groupme.com/350x419.png.adc8c73a6c1547e0a9e04320296329f8'; siege2 = 'https://i.groupme.com/1279x752.jpeg.aa5d0401e0df495bba4b4e09dc5a6bd7'
 	      siege3 = 'https://i.groupme.com/960x960.png.006e180e05d841c6a2962e844bf1e6fd';
@@ -67,7 +67,34 @@ var HTTPS = require('https');
 	  } 
 	  else if(request.text && botRegexShaki.test(request.text)) {
 	    this.res.writeHead(200);
-	    postMessage("https://i.groupme.com/305x375.jpeg.a8dd3aa18c7a4963a553e6dc16bcb100.large");
+	    postMessage("{
+	global $xml;
+	$count = count($xml->magic8ball->reply);
+	$index = rand(0, $count);
+	$msg = "Magic 8 Ball: " . $xml->magic8ball->reply[$index];
+	sendMsg($msg);
+	<magic8ball>
+		<reply>It is certain</reply>
+		<reply>It is decidedly so</reply>
+		<reply>Without a doubt</reply>
+		<reply>Yes, definitely</reply>
+		<reply>You may rely on it</reply>
+		<reply>As I see it, yes</reply>
+		<reply>Most likely</reply>
+		<reply>Outlook good</reply>
+		<reply>Yes</reply>
+		<reply>Signs point to yes</reply>
+		<reply>Reply hazy. Try again</reply>
+		<reply>Ask again later</reply>
+		<reply>Better not tell you</reply>
+		<reply>Cannot predict now</reply>
+		<reply>Concentrate and ask again</reply>
+		<reply>Dont count on it</reply>
+		<reply>My reply is no</reply>
+		<reply>My sources say no</reply>
+		<reply>Outlook not so good</reply>
+		<reply>Very doubtful</reply>
+	</magic8ball>}");
 	    this.res.end();
 	  } 
 	  else if(request.text && botRegexDL.test(request.text)) {
@@ -180,35 +207,7 @@ var HTTPS = require('https');
 	    this.res.writeHead(200);
 	    this.res.end();
 	  }
-	}
-	function send8Ball() {
-	global $xml;
-	$count = count($xml->magic8ball->reply);
-	$index = rand(0, $count);
-	$msg = "Magic 8 Ball: " . $xml->magic8ball->reply[$index];
-	sendMsg($msg);
-	<magic8ball>
-		<reply>It is certain</reply>
-		<reply>It is decidedly so</reply>
-		<reply>Without a doubt</reply>
-		<reply>Yes, definitely</reply>
-		<reply>You may rely on it</reply>
-		<reply>As I see it, yes</reply>
-		<reply>Most likely</reply>
-		<reply>Outlook good</reply>
-		<reply>Yes</reply>
-		<reply>Signs point to yes</reply>
-		<reply>Reply hazy. Try again</reply>
-		<reply>Ask again later</reply>
-		<reply>Better not tell you</reply>
-		<reply>Cannot predict now</reply>
-		<reply>Concentrate and ask again</reply>
-		<reply>Don't count on it</reply>
-		<reply>My reply is no</reply>
-		<reply>My sources say no</reply>
-		<reply>Outlook not so good</reply>
-		<reply>Very doubtful</reply>
-	</magic8ball>}
+	
 
 
 	function postMessage(response) {
