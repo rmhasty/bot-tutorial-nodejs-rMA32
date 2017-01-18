@@ -45,7 +45,7 @@ var HTTPS = require('https');
 	    postMessage("http://www.wikihow.com/Tie-a-Noose");
 	    this.res.end();
 	  } 
-	  else if(request.text && botRegexTakethis.test(request.text)) {
+	  else if(request.text && botRegexL.test(request.text)) {
 	    this.res.writeHead(200);
 	    postMessage("https://pbs.twimg.com/profile_images/711399945853607936/qdGJrEH7.jpg");
 	    this.res.end();
