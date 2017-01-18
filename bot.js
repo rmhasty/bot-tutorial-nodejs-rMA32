@@ -8,7 +8,7 @@ var HTTPS = require('https');
 	function respond() {
 	  var request = JSON.parse(this.req.chunks[0]),
 	      botRegex = /^\/week/;  botRegexDL = /^\/ros/i;botRegexSalt = /^\/salt/;botRegexRules = /^\/rules/
-	      botRegexAd=/^\/standings/;botRegexGTA = /^\/forum/; botRegexSC = /^\/sch/i; botODB = /(.*\s+)(.*odb)(\s+.*)/i; botDuck = /^\/duck/;
+	      botRegexAd=/^\/standings/;botRegexGTA = /^\/DL/; botRegexSC = /^\/sch/i; botODB = /(.*\s+)(.*odb)(\s+.*)/i; botDuck = /^\/duck/;
 	      botRegexP = /^\/ply/i;  botRegexTw = /^\/twitch/i; botRegexSb = /^\/sub/; botRegexSh = /^\/shrug/; botRegexWk = /^\/users/; botRegexCC = /^\/cc/;
 	      botRegexSiege = /^\/siege/; botRegexOW = /^\/ratings/; 
 	      botRegexSlut = /^\/help/; botRegexWelcome = /^\/welcome/;
@@ -78,7 +78,7 @@ var HTTPS = require('https');
 	  else if(request.text && botRegexDL.test(request.text)) {
 	    this.res.writeHead(200);
 	    //postMessage("http://www.daddyleagues.com/maddenrating?name=&position=all&team="+request.text.substring(5,8));
-	    postMessage("http://daddyleagues.com/GIML/team/"+request.text.substring(5,8)+"/depthchart");
+	    postMessage("http://daddyleagues.com/MBCFL/team/"+request.text.substring(5,8)+"/depthchart");
 	    this.res.end();
 	  } 
 	  
@@ -94,7 +94,7 @@ var HTTPS = require('https');
 	  } 
 	  else if(request.text && botRegexAd.test(request.text)) {
 	    this.res.writeHead(200);
-	    postMessage("http://daddyleagues.com/GIML/standings");
+	    postMessage("http://daddyleagues.com/MBCFL/standings");
 	    this.res.end();
 	  }
 	  else if(request.text && botRegexRules.test(request.text)) {
@@ -104,7 +104,7 @@ var HTTPS = require('https');
 	  } 
 	  else if(request.text && botRegexGTA.test(request.text)) {
 	    this.res.writeHead(200);
-	    postMessage("http://daddyleagues.com/giml/forum/home");
+	    postMessage("http://daddyleagues.com/MBCFL");
 	    this.res.end();
 	  } 
 	  else if(request.text && botRegexSC.test(request.text)) {
