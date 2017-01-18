@@ -13,7 +13,7 @@ var HTTPS = require('https');
 	      botRegexSiege = /^\/siege/; botRegexOW = /^\/ratings/; 
 	      botRegexSlut = /^\/help/; botRegexWelcome = /^\/welcome/;
 	      botRegexProp = /^\/prop/;botRegexKys = /^\/kys/; botRegexL = /^\/takethis/; botRegexBrye = /^\/brye/;
-	      botRegexGian = /^\/gian/; botRegexScrotes = /^\/scrotes/; botRegexShaki = /^\/shaki/;
+	      botRegexWut = /^\/wut/; botRegexScrotes = /^\/scrotes/; botRegexShaki = /^\/shaki/;
 	      botRegexDaf = /^\/dafuq/; botRegexAyy = /^\/ayy/; botRegexSchedule = /^\/schedule/;
 	      siege1 = 'https://i.groupme.com/350x419.png.adc8c73a6c1547e0a9e04320296329f8'; siege2 = 'https://i.groupme.com/1279x752.jpeg.aa5d0401e0df495bba4b4e09dc5a6bd7'
 	      siege3 = 'https://i.groupme.com/960x960.png.006e180e05d841c6a2962e844bf1e6fd';
@@ -60,9 +60,9 @@ var HTTPS = require('https');
 	    postMessage("https://i.groupme.com/600x490.jpeg.b31d5153fb474d9bb18dd51b3d650afe.large");
 	    this.res.end();
 	  } 
-	  else if(request.text && botRegexGian.test(request.text)) {
+	  else if(request.text && botRegexWut.test(request.text)) {
 	    this.res.writeHead(200);
-	    postMessage("http://i.imgur.com/9V6ZnvD.png");
+	    postMessage("https://scontent-atl3-1.cdninstagram.com/t51.2885-15/sh0.08/e35/p750x750/15802423_676357055876908_4292183087745335296_n.jpg?ig_cache_key=MTQyNTA1ODQzMzE3NDY1MDI2NA%3D%3D.2");
 	    this.res.end();
 	  } 
 	  else if(request.text && botRegexScrotes.test(request.text)) {
