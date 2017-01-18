@@ -65,11 +65,7 @@ var HTTPS = require('https');
 	    postMessage("http://i.imgur.com/GfJNU68.gif");
 	    this.res.end();
 	  } 
-	  else if(request.text && botRegextrash.test(request.text)) {
-	    this.res.writeHead(200);
-	    postMessage("http://vignette3.wikia.nocookie.net/oscarthegrouch/images/b/be/Trash_Can.jpg/revision/latest?cb=20120928224249); 
-	this.res.end();
-	  } 
+	  
 	  else if(request.text && botRegexDL.test(request.text)) {
 	    this.res.writeHead(200);
 	    //postMessage("http://www.daddyleagues.com/maddenrating?name=&position=all&team="+request.text.substring(5,8));
