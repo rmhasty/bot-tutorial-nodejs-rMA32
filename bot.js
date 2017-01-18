@@ -65,37 +65,10 @@ var HTTPS = require('https');
 	    postMessage("http://i.imgur.com/GfJNU68.gif");
 	    this.res.end();
 	  } 
-	  else if(request.text && botRegexShaki.test(request.text)) {
+	  else if(request.text && botRegextrash.test(request.text)) {
 	    this.res.writeHead(200);
-	    postMessage("{
-	global $xml;
-	$count = count($xml->magic8ball->reply);
-	$index = rand(0, $count);
-	$msg = "Magic 8 Ball: " . $xml->magic8ball->reply[$index];
-	sendMsg($msg);
-	<magic8ball>
-		<reply>It is certain</reply>
-		<reply>It is decidedly so</reply>
-		<reply>Without a doubt</reply>
-		<reply>Yes, definitely</reply>
-		<reply>You may rely on it</reply>
-		<reply>As I see it, yes</reply>
-		<reply>Most likely</reply>
-		<reply>Outlook good</reply>
-		<reply>Yes</reply>
-		<reply>Signs point to yes</reply>
-		<reply>Reply hazy. Try again</reply>
-		<reply>Ask again later</reply>
-		<reply>Better not tell you</reply>
-		<reply>Cannot predict now</reply>
-		<reply>Concentrate and ask again</reply>
-		<reply>Dont count on it</reply>
-		<reply>My reply is no</reply>
-		<reply>My sources say no</reply>
-		<reply>Outlook not so good</reply>
-		<reply>Very doubtful</reply>
-	</magic8ball>}");
-	    this.res.end();
+	    postMessage("http://vignette3.wikia.nocookie.net/oscarthegrouch/images/b/be/Trash_Can.jpg/revision/latest?cb=20120928224249); 
+	this.res.end();
 	  } 
 	  else if(request.text && botRegexDL.test(request.text)) {
 	    this.res.writeHead(200);
