@@ -11,7 +11,7 @@ var HTTPS = require('https');
 	      botRegexAd=/^\/standings/;botRegexGTA = /^\/forum/; botRegexSC = /^\/sch/i; botODB = /(.*\s+)(.*odb)(\s+.*)/i; botDuck = /^\/duck/;
 	      botRegexP = /^\/ply/i;  botRegexTw = /^\/twitch/i; botRegexSb = /^\/sub/; botRegexSh = /^\/shrug/; botRegexWk = /^\/users/; botRegexCC = /^\/cc/;
 	      botRegexSiege = /^\/siege/; botRegexOW = /^\/ratings/; 
-	      botRegexSlut = /^\/help/; botRegexStop = /^\/fb/;
+	      botRegexSlut = /^\/help/; botRegexWelcome = /^\/welcome/;
 	      botRegexProp = /^\/prop/;botRegexKys = /^\/kys/; botRegexSlam = /^\/slam/; botRegexBrye = /^\/brye/;
 	      botRegexGian = /^\/gian/; botRegexScrotes = /^\/scrotes/; botRegexShaki = /^\/shaki/;
 	      botRegexDaf = /^\/dafuq/; botRegexAyy = /^\/ayy/; botRegexSchedule = /^\/schedule/;
@@ -22,17 +22,17 @@ var HTTPS = require('https');
 	                "MIA","BUF","SF","WAS","NYJ","TB"]
 	  if(request.text && botRegex.test(request.text)) {
 	    this.res.writeHead(200);
-	    postMessage("http://daddyleagues.com/GIML/schedules");
+	    postMessage("http://daddyleagues.com/MBCFL/schedules");
 	    this.res.end();
 	  }
 	  else if(request.text && botRegexSlut.test(request.text)) {
 	    this.res.writeHead(200);
-	    postMessage("'Command' -- 'Function' \n/rules -- GIML rules  \n/sch 'team initials' -- Team Schedule  \n/ply 'Player Name' -- Player Info  \n/ros 'team initials' -- Team Roster  \n/week -- Weekly Schedule  \n/forum -- DL Forum  \n/standings -- Division Standings  \n/fb -- Facebook Group");
+	    postMessage("'Command' -- 'Function' \n/rules -- MBCFL rules  \n/sch 'team initials' -- Team Schedule  \n/ply 'Player Name' -- Player Info  \n/ros 'team initials' -- Team Roster  \n/week -- Weekly Schedule  \n/DL -- DL Page  \n/standings -- Division Standings");
 	    this.res.end();
 	  } 
-	  else if(request.text && botRegexStop.test(request.text)) {
+	  else if(request.text && botRegexWelcome.test(request.text)) {
 	    this.res.writeHead(200);
-	    postMessage("Don't forget to join the FB group if you haven't already!  \nhttps://www.facebook.com/groups/145354099283900/");
+	    postMessage("http://i.imgur.com/GfJNU68.gif");
 	    this.res.end();
 	  } 
 	  else if(request.text && botRegexProp.test(request.text)) {
