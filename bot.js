@@ -7,13 +7,13 @@ var HTTPS = require('https');
 
 	function respond() {
 	  var request = JSON.parse(this.req.chunks[0]),
-	      botRegex = /^\/week/;  botRegexDL = /^\/ros/i;botRegexSalt = /^\/salt/;botRegexRules = /^\/rules/
-	      botRegexAd=/^\/standings/;botRegexGTA = /^\/DL/; botRegexSC = /^\/sch/i; botODB = /(.*\s+)(.*odb)(\s+.*)/i; botDuck = /^\/duck/;
+	      botRegex = /^\/week/;  botRegexROS = /^\/ros/i;botRegexSalt = /^\/salt/;botRegexRules = /^\/rules/
+	      botRegexAd=/^\/standings/;botRegexDL = /^\/DL/; botRegexSC = /^\/sch/i; botODB = /(.*\s+)(.*odb)(\s+.*)/i; botDuck = /^\/duck/;
 	      botRegexP = /^\/ply/i;  botRegexTw = /^\/twitch/i; botRegexSb = /^\/sub/; botRegexSh = /^\/shrug/; botRegexWk = /^\/users/; botRegexCC = /^\/cc/;
 	      botRegexSiege = /^\/siege/; botRegexOW = /^\/ratings/; 
 	      botRegexSlut = /^\/help/; botRegexStop = /^\/fb/;
-	      botRegexProp = /^\/prop/;botRegexKys = /^\/kys/; botRegexTakinL = /^\/heretakethis/; botRegexBrye = /^\/brye/;
-	      botRegexNice = /^\/nice/; botRegexWelcome = /^\/welcome/; botRegex8ball = /^\/8ball/;
+	      botRegexProp = /^\/prop/;botRegexKys = /^\/kys/; botRegextakethis = /^\/takethis/; botRegexBrye = /^\/brye/;
+	      botRegexGian = /^\/gian/; botRegexScrotes = /^\/scrotes/; botRegexShaki = /^\/shaki/;
 	      botRegexDaf = /^\/dafuq/; botRegexAyy = /^\/ayy/; botRegexSchedule = /^\/schedule/;
 	      siege1 = 'https://i.groupme.com/350x419.png.adc8c73a6c1547e0a9e04320296329f8'; siege2 = 'https://i.groupme.com/1279x752.jpeg.aa5d0401e0df495bba4b4e09dc5a6bd7'
 	      siege3 = 'https://i.groupme.com/960x960.png.006e180e05d841c6a2962e844bf1e6fd';
@@ -27,9 +27,14 @@ var HTTPS = require('https');
 	  }
 	  else if(request.text && botRegexSlut.test(request.text)) {
 	    this.res.writeHead(200);
-	    postMessage("'Command' -- 'Function' \n/rules -- MBCFL rules  \n/sch 'team initials' -- Team Schedule  \n/ply 'Player Name' -- Player Info  \n/ros 'team initials' -- Team Roster  \n/week -- Weekly Schedule  \n/DL -- DL Page  \n/standings -- Division Standings");
+	    postMessage("'Command' -- 'Function' \n/rules -- MBCFL rules  \n/sch 'team initials' -- Team Schedule  \n/ply 'Player Name' -- Player Info  \n/ros 'team initials' -- Team Roster  \n/week -- Weekly Schedule  \n/forum -- DL Forum  \n/standings -- Division Standings  \n/fb -- Facebook Group");
 	    this.res.end();
-	  }
+	  } 
+	  else if(request.text && botRegexWelcome.test(request.text)) {
+	    this.res.writeHead(200);
+	    postMessage("http://i.imgur.com/GfJNU68.gif");
+	    this.res.end();
+	  } 
 	  else if(request.text && botRegexProp.test(request.text)) {
 	    this.res.writeHead(200);
 	    postMessage("https://i.groupme.com/409x327.jpeg.08b5d95c51bb4897835cfe6b514f2f52.large");
@@ -40,7 +45,7 @@ var HTTPS = require('https');
 	    postMessage("http://www.wikihow.com/Tie-a-Noose");
 	    this.res.end();
 	  } 
-	  else if(request.text && botRegexTakinL.test(request.text)) {
+	  else if(request.text && botRegextakethis.test(request.text)) {
 	    this.res.writeHead(200);
 	    postMessage("https://pbs.twimg.com/profile_images/711399945853607936/qdGJrEH7.jpg");
 	    this.res.end();
@@ -55,18 +60,22 @@ var HTTPS = require('https');
 	    postMessage("https://i.groupme.com/600x490.jpeg.b31d5153fb474d9bb18dd51b3d650afe.large");
 	    this.res.end();
 	  } 
-	  else if(request.text && botRegexNice.test(request.text)) {
+	  else if(request.text && botRegexGian.test(request.text)) {
 	    this.res.writeHead(200);
-	    postMessage("https://media.giphy.com/media/R8oQcpddGK92g/giphy.gif");
+	    postMessage("http://i.imgur.com/9V6ZnvD.png");
 	    this.res.end();
 	  } 
-	  else if(request.text && botRegexWelcome.test(request.text)) {
+	  else if(request.text && botRegexScrotes.test(request.text)) {
 	    this.res.writeHead(200);
-	    postMessage("http://i.imgur.com/GfJNU68.gif");
+	    postMessage("https://i.groupme.com/1006x1340.jpeg.730381e4280e4028b8375432af14f39f.large");
 	    this.res.end();
 	  } 
-	  
-	  else if(request.text && botRegexDL.test(request.text)) {
+	  else if(request.text && botRegexShaki.test(request.text)) {
+	    this.res.writeHead(200);
+	    postMessage("https://i.groupme.com/305x375.jpeg.a8dd3aa18c7a4963a553e6dc16bcb100.large");
+	    this.res.end();
+	  } 
+	  else if(request.text && botRegexROS.test(request.text)) {
 	    this.res.writeHead(200);
 	    //postMessage("http://www.daddyleagues.com/maddenrating?name=&position=all&team="+request.text.substring(5,8));
 	    postMessage("http://daddyleagues.com/MBCFL/team/"+request.text.substring(5,8)+"/depthchart");
@@ -90,12 +99,12 @@ var HTTPS = require('https');
 	  }
 	  else if(request.text && botRegexRules.test(request.text)) {
 	    this.res.writeHead(200);
-	    postMessage("https://docs.google.com/document/d/14Srn5Y37s9YSw1Q080Q4qyewDBbQZhlVbM9WV10cgJ8/mobilebasic");
+	    postMessage("https://docs.google.com/document/d/14Srn5Y37s9YSw1Q080Q4qyewDBbQZhlVbM9WV10cgJ8");
 	    this.res.end();
 	  } 
-	  else if(request.text && botRegexGTA.test(request.text)) {
+	  else if(request.text && botRegexDL.test(request.text)) {
 	    this.res.writeHead(200);
-	    postMessage("http://www.daddyleagues.com/MBCFL");
+	    postMessage("http://daddyleagues.com/MBCFL");
 	    this.res.end();
 	  } 
 	  else if(request.text && botRegexSC.test(request.text)) {
@@ -176,8 +185,8 @@ var HTTPS = require('https');
 	    this.res.writeHead(200);
 	    this.res.end();
 	  }
+	}
 	
-
 
 	function postMessage(response) {
 	  var botResponse,options, body, botReq;
@@ -229,4 +238,5 @@ var HTTPS = require('https');
 	
 
 	exports.respond = respond;
+
 
