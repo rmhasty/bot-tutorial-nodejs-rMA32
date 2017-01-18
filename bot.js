@@ -7,12 +7,12 @@ var HTTPS = require('https');
 
 	function respond() {
 	  var request = JSON.parse(this.req.chunks[0]),
-	      botRegex = /^\/week/;  botRegexROS = /^\/ros/i;botRegexSalt = /^\/salt/;botRegexRules = /^\/rules/
-	      botRegexAd=/^\/standings/;botRegexDL = /^\/DL/; botRegexSC = /^\/sch/i; botODB = /(.*\s+)(.*odb)(\s+.*)/i; botDuck = /^\/duck/;
+	      botRegex = /^\/week/;  botRegexDL = /^\/ros/i;botRegexSalt = /^\/salt/;botRegexRules = /^\/rules/
+	      botRegexAd=/^\/standings/;botRegexGTA = /^\/forum/; botRegexSC = /^\/sch/i; botODB = /(.*\s+)(.*odb)(\s+.*)/i; botDuck = /^\/duck/;
 	      botRegexP = /^\/ply/i;  botRegexTw = /^\/twitch/i; botRegexSb = /^\/sub/; botRegexSh = /^\/shrug/; botRegexWk = /^\/users/; botRegexCC = /^\/cc/;
 	      botRegexSiege = /^\/siege/; botRegexOW = /^\/ratings/; 
 	      botRegexSlut = /^\/help/; botRegexStop = /^\/fb/;
-	      botRegexProp = /^\/prop/;botRegexKys = /^\/kys/; botRegextakethis = /^\/takethis/; botRegexBrye = /^\/brye/;
+	      botRegexProp = /^\/prop/;botRegexKys = /^\/kys/; botRegexSlam = /^\/slam/; botRegexBrye = /^\/brye/;
 	      botRegexGian = /^\/gian/; botRegexScrotes = /^\/scrotes/; botRegexShaki = /^\/shaki/;
 	      botRegexDaf = /^\/dafuq/; botRegexAyy = /^\/ayy/; botRegexSchedule = /^\/schedule/;
 	      siege1 = 'https://i.groupme.com/350x419.png.adc8c73a6c1547e0a9e04320296329f8'; siege2 = 'https://i.groupme.com/1279x752.jpeg.aa5d0401e0df495bba4b4e09dc5a6bd7'
@@ -22,17 +22,17 @@ var HTTPS = require('https');
 	                "MIA","BUF","SF","WAS","NYJ","TB"]
 	  if(request.text && botRegex.test(request.text)) {
 	    this.res.writeHead(200);
-	    postMessage("http://daddyleagues.com/MBCFL/schedules");
+	    postMessage("http://daddyleagues.com/GIML/schedules");
 	    this.res.end();
 	  }
 	  else if(request.text && botRegexSlut.test(request.text)) {
 	    this.res.writeHead(200);
-	    postMessage("'Command' -- 'Function' \n/rules -- MBCFL rules  \n/sch 'team initials' -- Team Schedule  \n/ply 'Player Name' -- Player Info  \n/ros 'team initials' -- Team Roster  \n/week -- Weekly Schedule  \n/DL -- DL Page  \n/standings -- Division Standings");
+	    postMessage("'Command' -- 'Function' \n/rules -- GIML rules  \n/sch 'team initials' -- Team Schedule  \n/ply 'Player Name' -- Player Info  \n/ros 'team initials' -- Team Roster  \n/week -- Weekly Schedule  \n/forum -- DL Forum  \n/standings -- Division Standings  \n/fb -- Facebook Group");
 	    this.res.end();
 	  } 
-	  else if(request.text && botRegexWelcome.test(request.text)) {
+	  else if(request.text && botRegexStop.test(request.text)) {
 	    this.res.writeHead(200);
-	    postMessage("http://i.imgur.com/GfJNU68.gif");
+	    postMessage("Don't forget to join the FB group if you haven't already!  \nhttps://www.facebook.com/groups/145354099283900/");
 	    this.res.end();
 	  } 
 	  else if(request.text && botRegexProp.test(request.text)) {
@@ -45,9 +45,9 @@ var HTTPS = require('https');
 	    postMessage("http://www.wikihow.com/Tie-a-Noose");
 	    this.res.end();
 	  } 
-	  else if(request.text && botRegextakethis.test(request.text)) {
+	  else if(request.text && botRegexSlam.test(request.text)) {
 	    this.res.writeHead(200);
-	    postMessage("https://pbs.twimg.com/profile_images/711399945853607936/qdGJrEH7.jpg");
+	    postMessage("https://pbs.twimg.com/profile_images/587294731471757313/ZpI5PfKq.jpg");
 	    this.res.end();
 	  } 
 	  else if(request.text && botRegexDaf.test(request.text)) {
@@ -75,10 +75,10 @@ var HTTPS = require('https');
 	    postMessage("https://i.groupme.com/305x375.jpeg.a8dd3aa18c7a4963a553e6dc16bcb100.large");
 	    this.res.end();
 	  } 
-	  else if(request.text && botRegexROS.test(request.text)) {
+	  else if(request.text && botRegexDL.test(request.text)) {
 	    this.res.writeHead(200);
 	    //postMessage("http://www.daddyleagues.com/maddenrating?name=&position=all&team="+request.text.substring(5,8));
-	    postMessage("http://daddyleagues.com/MBCFL/team/"+request.text.substring(5,8)+"/depthchart");
+	    postMessage("http://daddyleagues.com/GIML/team/"+request.text.substring(5,8)+"/depthchart");
 	    this.res.end();
 	  } 
 	  
@@ -94,30 +94,30 @@ var HTTPS = require('https');
 	  } 
 	  else if(request.text && botRegexAd.test(request.text)) {
 	    this.res.writeHead(200);
-	    postMessage("http://daddyleagues.com/MBCFL/standings");
+	    postMessage("http://daddyleagues.com/GIML/standings");
 	    this.res.end();
 	  }
 	  else if(request.text && botRegexRules.test(request.text)) {
 	    this.res.writeHead(200);
-	    postMessage("https://docs.google.com/document/d/14Srn5Y37s9YSw1Q080Q4qyewDBbQZhlVbM9WV10cgJ8/edit");
+	    postMessage("https://docs.google.com/document/d/1ShmkjSr2qZbNpnD0pRyVjgu9LsG0DDG8BQi3CJQVcx4/edit?usp=sharing");
 	    this.res.end();
 	  } 
-	  else if(request.text && botRegexDL.test(request.text)) {
+	  else if(request.text && botRegexGTA.test(request.text)) {
 	    this.res.writeHead(200);
-	    postMessage("http://daddyleagues.com/MBCFL");
+	    postMessage("http://daddyleagues.com/giml/forum/home");
 	    this.res.end();
 	  } 
 	  else if(request.text && botRegexSC.test(request.text)) {
 	    this.res.writeHead(200);
 	    
-	    postMessage("http://daddyleagues.com/MBCFL/team/"+request.text.substring(5,8)+"/schedule");
+	    postMessage("http://daddyleagues.com/GIML/team/"+request.text.substring(5,8)+"/schedule");
 	    this.res.end();
 	  }
 	  else if(request.text && botRegexP.test(request.text)) {
 	    this.res.writeHead(200);
 	    var req = request.text.substring(5,request.text.length);
 	    var rep = req.replace(/ /,"+");
-	    postMessage("http://daddyleagues.com/MBCFL/players?name="+rep+"&position=all&team=all");
+	    postMessage("http://daddyleagues.com/GIML/players?name="+rep+"&position=all&team=all");
 	    
 	    this.res.end();
 	  }  
@@ -238,5 +238,3 @@ var HTTPS = require('https');
 	
 
 	exports.respond = respond;
-
-
