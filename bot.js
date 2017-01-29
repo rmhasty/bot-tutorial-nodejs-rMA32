@@ -13,7 +13,7 @@ var HTTPS = require('https');
 	      botRegexSiege = /^\/siege/; botRegexOW = /^\/ratings/; 
 	      botRegexSlut = /^\/help/; botRegexWelcome = /^\/welcome/;
 	      botRegexProp = /^\/prop/;botRegexKys = /^\/kys/; botRegexL = /^\/takethis/; botRegexCash = /^\/cash/;
-	      botRegexWut = /^\/wut/; botRegexScrotes = /^\/scrotes/; botRegexNooo = /^\/plzno/;
+	      botRegexWut = /^\/wut/; botRegexTrade = /^\/trade/; botRegexNooo = /^\/plzno/;
 	      botRegexDaf = /^\/dafuq/; botRegexAyy = /^\/ayy/; botRegexSchedule = /^\/schedule/;
 	      siege1 = 'https://i.groupme.com/350x419.png.adc8c73a6c1547e0a9e04320296329f8'; siege2 = 'https://i.groupme.com/1279x752.jpeg.aa5d0401e0df495bba4b4e09dc5a6bd7'
 	      siege3 = 'https://i.groupme.com/960x960.png.006e180e05d841c6a2962e844bf1e6fd';
@@ -27,7 +27,7 @@ var HTTPS = require('https');
 	  }
 	  else if(request.text && botRegexSlut.test(request.text)) {
 	    this.res.writeHead(200);
-	    postMessage("'Command' -- 'Function' \n/rules -- Trashcity rules  \n/sch 'team initials' -- Team Schedule  \n/ply 'Player Name' -- Player Info  \n/ros 'team initials' -- Team Roster  \n/week -- Weekly Schedule  \n/DL -- DaddyLeagues Page  \n/standings -- Division Standings  \n/twitch 'username' -- Twitch Stream");
+	    postMessage("'Command' -- 'Function' \n/rules -- Trashcity rules  \n/sch 'team initials' -- Team Schedule  \n/ply 'Player Name' -- Player Info  \n/ros 'team initials' -- Team Roster  \n/week -- Weekly Schedule  \n/DL -- DaddyLeagues Page  \n/standings -- Division Standings  \n/twitch 'username' -- Twitch Stream  \n/trade -- Team Trading Info");
 	    this.res.end();
 	  } 
 	  else if(request.text && botRegexWelcome.test(request.text)) {
@@ -65,9 +65,9 @@ var HTTPS = require('https');
 	    postMessage("https://scontent-atl3-1.cdninstagram.com/t51.2885-15/sh0.08/e35/p750x750/15802423_676357055876908_4292183087745335296_n.jpg?ig_cache_key=MTQyNTA1ODQzMzE3NDY1MDI2NA%3D%3D.2");
 	    this.res.end();
 	  } 
-	  else if(request.text && botRegexScrotes.test(request.text)) {
+	  else if(request.text && botRegexTrade.test(request.text)) {
 	    this.res.writeHead(200);
-	    postMessage("https://i.groupme.com/1006x1340.jpeg.730381e4280e4028b8375432af14f39f.large");
+	    postMessage("https://docs.google.com/document/d/1kwQ8LUja0_0UbJhRhste4TFseSyxVFlhAI9Slps1oqg/edit");
 	    this.res.end();
 	  } 
 	  else if(request.text && botRegexNooo.test(request.text)) {
