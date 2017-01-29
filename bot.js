@@ -12,7 +12,7 @@ var HTTPS = require('https');
 	      botRegexP = /^\/ply/i;  botRegexTw = /^\/twitch/i; botRegexSb = /^\/sub/; botRegexSh = /^\/shrug/; botRegexWk = /^\/users/; botRegexCC = /^\/cc/;
 	      botRegexSiege = /^\/siege/; botRegexOW = /^\/ratings/; 
 	      botRegexSlut = /^\/help/; botRegexWelcome = /^\/welcome/;
-	      botRegexProp = /^\/prop/;botRegexKys = /^\/kys/; botRegexL = /^\/takethis/; botRegexBrye = /^\/brye/;
+	      botRegexProp = /^\/prop/;botRegexKys = /^\/kys/; botRegexL = /^\/takethis/; botRegexCash = /^\/cash/;
 	      botRegexWut = /^\/wut/; botRegexScrotes = /^\/scrotes/; botRegexShaki = /^\/shaki/;
 	      botRegexDaf = /^\/dafuq/; botRegexAyy = /^\/ayy/; botRegexSchedule = /^\/schedule/;
 	      siege1 = 'https://i.groupme.com/350x419.png.adc8c73a6c1547e0a9e04320296329f8'; siege2 = 'https://i.groupme.com/1279x752.jpeg.aa5d0401e0df495bba4b4e09dc5a6bd7'
@@ -55,9 +55,9 @@ var HTTPS = require('https');
 	    postMessage("http://i3.kym-cdn.com/photos/images/facebook/000/787/356/d6f.jpg");
 	    this.res.end();
 	  } 
-	  else if(request.text && botRegexBrye.test(request.text)) {
+	  else if(request.text && botRegexCash.test(request.text)) {
 	    this.res.writeHead(200);
-	    postMessage("https://i.groupme.com/600x490.jpeg.b31d5153fb474d9bb18dd51b3d650afe.large");
+	    postMessage("http://i2.kym-cdn.com/photos/images/facebook/001/209/784/5de.png");
 	    this.res.end();
 	  } 
 	  else if(request.text && botRegexWut.test(request.text)) {
