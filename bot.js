@@ -8,7 +8,7 @@ var HTTPS = require('https');
 	function respond() {
 	  var request = JSON.parse(this.req.chunks[0]),
 	      botRegex = /^\/week/;  botRegexDL = /^\/ros/i;botRegexSalt = /^\/salt/;botRegexRules = /^\/rules/
-	      botRegexleague=/^\/league/;botRegexGTA = /^\/DL/; botRegexSC = /^\/sch/i; botODB = /(.*\s+)(.*odb)(\s+.*)/i; botDuck = /^\/duck/;
+	      botRegexleague=/^\/league/;botRegexGTA = /^\/dl/; botRegexSC = /^\/sch/i; botODB = /(.*\s+)(.*odb)(\s+.*)/i; botDuck = /^\/duck/;
 	      botRegexP = /^\/ply/i;  botRegexTw = /^\/twitch/i; botRegexSb = /^\/sub/; botRegexSh = /^\/shrug/; botRegexWk = /^\/users/; botRegexCC = /^\/cc/;
 	      botRegexSiege = /^\/siege/; botRegexOW = /^\/ratings/; 
 	      botRegexSlut = /^\/help/; botRegexWelcome = /^\/welcome/;
@@ -27,7 +27,7 @@ var HTTPS = require('https');
 	  }
 	  else if(request.text && botRegexSlut.test(request.text)) {
 	    this.res.writeHead(200);
-	    postMessage("'Command' -- 'Function' \n/rules -- Trashcity rules  \n/sch 'team initials' -- Team Schedule  \n/ply 'Player Name' -- Player Info  \n/ros 'team initials' -- Team Roster  \n/week -- Weekly Schedule  \n/DL -- DaddyLeagues Page  \n/twitch 'username' -- Twitch Stream  \n/trade -- Team Trading Info  \n/league -- League Info");
+	    postMessage("'Command' -- 'Function' \n/rules -- Trashcity rules  \n/sch 'team initials' -- Team Schedule  \n/ply 'Player Name' -- Player Info  \n/ros 'team initials' -- Team Roster  \n/week -- Weekly Schedule  \n/dl -- DaddyLeagues Page  \n/twitch 'username' -- Twitch Stream  \n/trade -- Team Trading Info  \n/league -- League Info");
 	    this.res.end();
 	  } 
 	  else if(request.text && botRegexWelcome.test(request.text)) {
@@ -75,7 +75,7 @@ var HTTPS = require('https');
 	    postMessage("http://www.gifbin.com/bin/092009/1253886001_office-no.gif");
 	    this.res.end();
 	  } 
-	  else if(request.text && botRegexDL.test(request.text)) {
+	  else if(request.text && botRegexdl.test(request.text)) {
 	    this.res.writeHead(200);
 	    //postMessage("http://www.daddyleagues.com/maddenrating?name=&position=all&team="+request.text.substring(5,8));
 	    postMessage("http://daddyleagues.com/Trashcity/team/"+request.text.substring(5,8)+"/depthchart");
