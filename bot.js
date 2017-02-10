@@ -8,7 +8,7 @@ var HTTPS = require('https');
 	function respond() {
 	  var request = JSON.parse(this.req.chunks[0]),
 	      botRegex = /^\/week/;  botRegexDL = /^\/ros/i;botRegexSalt = /^\/salt/;botRegexRules = /^\/rules/
-	      botRegexAd=/^\/standings/;botRegexGTA = /^\/DL/; botRegexSC = /^\/sch/i; botODB = /(.*\s+)(.*odb)(\s+.*)/i; botDuck = /^\/duck/;
+	      botRegexleague=/^\/league/;botRegexGTA = /^\/DL/; botRegexSC = /^\/sch/i; botODB = /(.*\s+)(.*odb)(\s+.*)/i; botDuck = /^\/duck/;
 	      botRegexP = /^\/ply/i;  botRegexTw = /^\/twitch/i; botRegexSb = /^\/sub/; botRegexSh = /^\/shrug/; botRegexWk = /^\/users/; botRegexCC = /^\/cc/;
 	      botRegexSiege = /^\/siege/; botRegexOW = /^\/ratings/; 
 	      botRegexSlut = /^\/help/; botRegexWelcome = /^\/welcome/;
@@ -27,7 +27,7 @@ var HTTPS = require('https');
 	  }
 	  else if(request.text && botRegexSlut.test(request.text)) {
 	    this.res.writeHead(200);
-	    postMessage("'Command' -- 'Function' \n/rules -- Trashcity rules  \n/sch 'team initials' -- Team Schedule  \n/ply 'Player Name' -- Player Info  \n/ros 'team initials' -- Team Roster  \n/week -- Weekly Schedule  \n/DL -- DaddyLeagues Page  \n/standings -- Division Standings  \n/twitch 'username' -- Twitch Stream  \n/trade -- Team Trading Info");
+	    postMessage("'Command' -- 'Function' \n/rules -- Trashcity rules  \n/sch 'team initials' -- Team Schedule  \n/ply 'Player Name' -- Player Info  \n/ros 'team initials' -- Team Roster  \n/week -- Weekly Schedule  \n/DL -- DaddyLeagues Page  \n/twitch 'username' -- Twitch Stream  \n/trade -- Team Trading Info  \n/league -- League Info");
 	    this.res.end();
 	  } 
 	  else if(request.text && botRegexWelcome.test(request.text)) {
@@ -92,9 +92,9 @@ var HTTPS = require('https');
 	    postMessage("https://i.imgur.com/B5BSVqH.png");
 	    this.res.end();
 	  } 
-	  else if(request.text && botRegexAd.test(request.text)) {
+	  else if(request.text && botRegexleague.test(request.text)) {
 	    this.res.writeHead(200);
-	    postMessage("http://daddyleagues.com/Trashcity/standings");
+	    postMessage("League name: Trashcity  Password: kyleisnotbae");
 	    this.res.end();
 	  }
 	  else if(request.text && botRegexRules.test(request.text)) {
