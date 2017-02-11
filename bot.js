@@ -22,12 +22,12 @@ var HTTPS = require('https');
 	                "MIA","BUF","SF","WAS","NYJ","TB"]
 	  if(request.text && botRegex.test(request.text)) {
 	    this.res.writeHead(200);
-	    postMessage("http://daddyleagues.com/MFLMaddenLg/schedules");
+	    postMessage("http://daddyleagues.com/Trashcity/schedules");
 	    this.res.end();
 	  }
 	  else if(request.text && botRegexSlut.test(request.text)) {
 	    this.res.writeHead(200);
-	    postMessage("'Command' -- 'Function' \n/rules -- MFLMaddenLg rules  \n/sch 'team initials' -- Team Schedule  \n/ply 'Player Name' -- Player Info  \n/ros 'team initials' -- Team Roster  \n/week -- Weekly Schedule  \n/DL -- DaddyLeagues Page  \n/standings -- Division Standings  \n/twitch 'username' -- Twitch Stream");
+	    postMessage("'Command' -- 'Function' \n/rules -- Trashcity rules  \n/sch 'team initials' -- Team Schedule  \n/ply 'Player Name' -- Player Info  \n/ros 'team initials' -- Team Roster  \n/week -- Weekly Schedule  \n/DL -- DaddyLeagues Page  \n/standings -- Division Standings  \n/twitch 'username' -- Twitch Stream");
 	    this.res.end();
 	  } 
 	  else if(request.text && botRegexWelcome.test(request.text)) {
@@ -78,7 +78,7 @@ var HTTPS = require('https');
 	  else if(request.text && botRegexDL.test(request.text)) {
 	    this.res.writeHead(200);
 	    //postMessage("http://www.daddyleagues.com/maddenrating?name=&position=all&team="+request.text.substring(5,8));
-	    postMessage("http://daddyleagues.com/MFLMaddenLg/team/"+request.text.substring(5,8)+"/depthchart");
+	    postMessage("http://daddyleagues.com/Trashcity/team/"+request.text.substring(5,8)+"/depthchart");
 	    this.res.end();
 	  } 
 	  
@@ -94,30 +94,30 @@ var HTTPS = require('https');
 	  } 
 	  else if(request.text && botRegexAd.test(request.text)) {
 	    this.res.writeHead(200);
-	    postMessage("http://daddyleagues.com/MFLMaddenLg/standings");
+	    postMessage("http://daddyleagues.com/Trashcity/standings");
 	    this.res.end();
 	  }
 	  else if(request.text && botRegexRules.test(request.text)) {
 	    this.res.writeHead(200);
-	    postMessage("https://docs.google.com/document/d/17M8LSkOgGI0V2gf1Zqnxmd74DtJsdmWMk_E6Ec8q-IU/edit");
+	    postMessage("https://docs.google.com/document/d/14Srn5Y37s9YSw1Q080Q4qyewDBbQZhlVbM9WV10cgJ8/edit");
 	    this.res.end();
 	  } 
 	  else if(request.text && botRegexGTA.test(request.text)) {
 	    this.res.writeHead(200);
-	    postMessage("http://daddyleagues.com/MFLMaddenLg");
+	    postMessage("http://daddyleagues.com/Trashcity");
 	    this.res.end();
 	  } 
 	  else if(request.text && botRegexSC.test(request.text)) {
 	    this.res.writeHead(200);
 	    
-	    postMessage("http://daddyleagues.com/MFLMaddenLg/team/"+request.text.substring(5,8)+"/schedule");
+	    postMessage("http://daddyleagues.com/Trashcity/team/"+request.text.substring(5,8)+"/schedule");
 	    this.res.end();
 	  }
 	  else if(request.text && botRegexP.test(request.text)) {
 	    this.res.writeHead(200);
 	    var req = request.text.substring(5,request.text.length);
 	    var rep = req.replace(/ /,"+");
-	    postMessage("http://daddyleagues.com/MFLMaddenLg/players?name="+rep+"&position=all&team=all");
+	    postMessage("http://daddyleagues.com/Trashcity/players?name="+rep+"&position=all&team=all");
 	    
 	    this.res.end();
 	  }  
