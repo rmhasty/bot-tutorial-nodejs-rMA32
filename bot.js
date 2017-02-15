@@ -62,7 +62,7 @@ var HTTPS = require('https');
 	  } 
 	  else if(request.text && botRegexWut.test(request.text)) {
 	    this.res.writeHead(200);
-	    postMessage("https://scontent-atl3-1.cdninstagram.com/t51.2885-15/sh0.08/e35/p750x750/15802423_676357055876908_4292183087745335296_n.jpg?ig_cache_key=MTQyNTA1ODQzMzE3NDY1MDI2NA%3D%3D.2");
+	    postMessage("https://pbs.twimg.com/profile_images/822150387318845441/5FbDepWf.jpg");
 	    this.res.end();
 	  } 
 	  else if(request.text && botRegexTrade.test(request.text)) {
