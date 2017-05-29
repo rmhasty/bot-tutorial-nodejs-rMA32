@@ -27,7 +27,7 @@ var HTTPS = require('https');
 	  }
 	  else if(request.text && botRegexSlut.test(request.text)) {
 	    this.res.writeHead(200);
-	    postMessage("'Command' -- 'Function' \n/rules -- MFL 2.0 rules (not linked yet)  \n/sch 'team initials' -- Team Schedule  \n/ply 'Player Name' -- Player Info  \n/ros 'team initials' -- Team Roster  \n/week -- Weekly Schedule  \n/DL -- DaddyLeagues Page  \n/standings -- Division Standings  \n/twitch 'username' -- Twitch Stream");
+	    postMessage("'Command' -- 'Function' \n/rules -- MFL 2.0 rules  \n/sch 'team initials' -- Team Schedule  \n/ply 'Player Name' -- Player Info  \n/ros 'team initials' -- Team Roster  \n/week -- Weekly Schedule  \n/DL -- DaddyLeagues Page  \n/standings -- Division Standings  \n/twitch 'username' -- Twitch Stream");
 	    this.res.end();
 	  } 
 	  else if(request.text && botRegexWelcome.test(request.text)) {
@@ -99,7 +99,7 @@ var HTTPS = require('https');
 	  }
 	  else if(request.text && botRegexRules.test(request.text)) {
 	    this.res.writeHead(200);
-	    postMessage("");
+	    postMessage("https://docs.google.com/document/d/1GBdHvr876vYg4cDRDl4zc9FmexFasilKEKd_Nt4ygSw/edit");
 	    this.res.end();
 	  } 
 	  else if(request.text && botRegexGTA.test(request.text)) {
