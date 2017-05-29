@@ -12,7 +12,7 @@ var HTTPS = require('https');
 	      botRegexP = /^\/ply/i;  botRegexTw = /^\/twitch/i; botRegexSb = /^\/sub/; botRegexSh = /^\/shrug/; botRegexWk = /^\/users/; botRegexCC = /^\/cc/;
 	      botRegexSiege = /^\/siege/; botRegexOW = /^\/ratings/; 
 	      botRegexSlut = /^\/help/; botRegexWelcome = /^\/welcome/;
-	      botRegexProp = /^\/prop/;botRegexKys = /^\/kys/; botRegexL = /^\/takethis/; botRegexCash = /^\/cash/;
+	      botRegexnew = /^\/new/;botRegexKys = /^\/kys/; botRegexL = /^\/takethis/; botRegexCash = /^\/cash/;
 	      botRegexWut = /^\/wut/; botRegexTrade = /^\/trade/; botRegexNooo = /^\/plzno/;
 	      botRegexDaf = /^\/dafuq/; botRegexAyy = /^\/ayy/; botRegexSchedule = /^\/schedule/;
 	      siege1 = 'https://i.groupme.com/350x419.png.adc8c73a6c1547e0a9e04320296329f8'; siege2 = 'https://i.groupme.com/1279x752.jpeg.aa5d0401e0df495bba4b4e09dc5a6bd7'
@@ -35,9 +35,9 @@ var HTTPS = require('https');
 	    postMessage("http://i.imgur.com/GfJNU68.gif");
 	    this.res.end();
 	  } 
-	  else if(request.text && botRegexProp.test(request.text)) {
+	  else if(request.text && botRegexnew.test(request.text)) {
 	    this.res.writeHead(200);
-	    postMessage("https://i.groupme.com/409x327.jpeg.08b5d95c51bb4897835cfe6b514f2f52.large");
+	    postMessage("League Name: MFLRookies          Password: 1234           Custom Coaches ONLY         NO FA Signings Yet");
 	    this.res.end();
 	  }
 	  else if(request.text && botRegexKys.test(request.text)) {
