@@ -37,7 +37,7 @@ var HTTPS = require('https');
 	  } 
 	  else if(request.text && botRegexnew.test(request.text)) {
 	    this.res.writeHead(200);
-	    postMessage("League Name: MFLRookies          Password: 1234                  Custom Coaches ONLY                              NO FA Signings Yet");
+	    postMessage("League Name: MFLRookies          Password: 1234                        Custom Coaches ONLY                                   NO FA Signings Yet");
 	    this.res.end();
 	  }
 	  else if(request.text && botRegexKys.test(request.text)) {
