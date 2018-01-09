@@ -27,7 +27,7 @@ var HTTPS = require('https');
 	  }
 	  else if(request.text && botRegexSlut.test(request.text)) {
 	    this.res.writeHead(200);
-	    postMessage("'Command' -- 'Function' \n/rules -- MFL 2.0 rules  \n/sch 'team initials' -- Team Schedule  \n/ply 'Player Name' -- Player Info  \n/ros 'team initials' -- Team Roster  \n/week -- Weekly Schedule  \n/DL -- DaddyLeagues Page  \n/standings -- Division Standings  \n/twitch 'username' -- Twitch Stream");
+	    postMessage("'Command' -- 'Function' \n/rules -- BBL rules  \n/sch 'team initials' -- Team Schedule  \n/ply 'Player Name' -- Player Info  \n/ros 'team initials' -- Team Roster  \n/week -- Weekly Schedule  \n/DL -- DaddyLeagues Page  \n/standings -- Division Standings  \n/twitch 'username' -- Twitch Stream");
 	    this.res.end();
 	  } 
 	  else if(request.text && botRegexWelcome.test(request.text)) {
@@ -37,7 +37,7 @@ var HTTPS = require('https');
 	  } 
 	  else if(request.text && botRegexnew.test(request.text)) {
 	    this.res.writeHead(200);
-	    postMessage("League Name: MFLRookies          Password: 1234                               Custom Coaches ONLY");
+	    postMessage("League Name: BestBallers          Password: 1234                               Custom Coaches ONLY");
 	    this.res.end();
 	  }
 	  else if(request.text && botRegexKys.test(request.text)) {
