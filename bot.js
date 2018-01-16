@@ -37,7 +37,7 @@ var HTTPS = require('https');
 	  } 
 	  else if(request.text && botRegexnew.test(request.text)) {
 	    this.res.writeHead(200);
-	    postMessage("League Name: BestBallers          Password: 1234                               Custom Coaches ONLY                       No FA until Week 1                            Ball Hawk and Heat Seeker OFF");
+	    postMessage("League Name: BestBallers          Password: 1234                               Custom Coaches ONLY                       No FA until Week 1                                 Ball Hawk and Heat Seeker OFF");
 	    this.res.end();
 	  }
 	  else if(request.text && botRegexKys.test(request.text)) {
